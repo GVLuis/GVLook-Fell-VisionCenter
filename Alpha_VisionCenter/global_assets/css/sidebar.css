@@ -1,0 +1,187 @@
+/* ------------------------------------------------------------------------------
+ *
+ *  # Sidebar
+ *
+ * ---------------------------------------------------------------------------- */
+ 
+ .sidebar-default {
+  background-color: #fff;
+  color: #333333;
+  border-bottom: 1px solid #ddd;
+}
+@media (min-width: 769px) {
+  .sidebar-default {
+    border-bottom: 0;
+    border-right: 1px solid #ddd;
+  }
+  .content-wrapper + .sidebar-default {
+    border-left: 1px solid #ddd;
+  }
+}
+.sidebar-detached-hidden .sidebar-detached > .sidebar {
+  display: none;
+}
+@media (max-width: 768px) {
+  .sidebar-mobile-detached .sidebar-detached > .sidebar {
+    display: block;
+  }
+}
+.category-title {
+  position: relative;
+  margin: 0;
+  padding: 12px 20px;
+  padding-right: 46px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.category-title > span {
+  display: block;
+  margin-top: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.82;
+}
+
+.category-title .icons-list {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  margin-top: -8px;
+}
+.sidebar-default .category-title {
+  border-bottom-color: #ddd;
+}
+.sidebar-default .navigation li.navigation-divider {
+  background-color: #eeeeee;
+}
+
+@media (min-width: 769px) {
+  .has-detached-left .container-detached {
+   float: right;
+   margin-left: -260px;
+   width: 100%;
+ }
+ .has-detached-left .content-detached {
+   margin-left: 280px;
+ }
+ .has-detached-left .sidebar-detached {
+   float: left;
+ }
+ .has-detached-right .container-detached {
+   float: left;
+   margin-right: -260px;
+   width: 100%;
+ }
+ .has-detached-right .content-detached {
+   margin-right: 280px;
+ }
+ .has-detached-right .sidebar-detached {
+   float: right;
+ }
+ .has-detached-right .sidebar-detached.affix {
+   right: 20px;
+ }
+ .sidebar-detached-hidden .container-detached {
+   float: none;
+   margin: 0;
+ } 
+ .sidebar-detached-hidden .content-detached {
+   margin: 0;
+ }
+ .sidebar-detached-hidden .sidebar-detached {
+   float: none;
+ }
+}
+.sidebar-detached .navigation.nav > .active > .hidden-ul {
+ display: block;
+}
+@media (max-width: 768px) {
+ .sidebar-detached .navigation.nav > li > .hidden-ul {
+   display: block;
+ }
+}
+.sidebar-detached.affix {
+ position: static;
+}
+
+@media (min-width: 769px) {
+  .sidebar-detached {
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .sidebar-detached > .sidebar-default {
+    border: 1px solid #ddd;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  }
+  .sidebar-detached > .sidebar {
+    margin-bottom: 0;
+    display: block;
+    border-radius: 3px;
+  }
+  .sidebar-detached.affix {
+    position: fixed;
+    top: 20px;
+    bottom: 20px;
+    -webkit-transition: bottom ease-in-out 0.15s;
+    -o-transition: bottom ease-in-out 0.15s;
+    transition: bottom ease-in-out 0.15s;
+  }
+  .sidebar-detached.affix > .sidebar {
+    max-height: 100%;
+    overflow-y: auto;
+  }
+  .sidebar-detached.fixed-sidebar-space {
+    bottom: 80px;
+  }
+
+}
+
+.sidebar-detached h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.sidebar-detached input,
+input.input-rounded,
+button.btn-rounded {
+  border-radius: 10px;
+}
+.minimum-amount .form-group {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0px;
+  padding: 7px 12px;
+  background-color: #fafafa;
+}
+.minimum-amount .form-group:first-child {
+  border: 1px solid #ddd;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 7px 12px;
+  background-color: #fafafa;
+  margin-top: 10px;
+}
+.minimum-amount .form-group:last-child {
+  border-top: 0px solid #ddd;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 7px 12px;
+  background-color: #fafafa;
+}
+.sidebar-content {
+  padding-bottom: 0px;
+}
+@media (min-width: 769px) {
+  .sidebar-detached>.sidebar {
+      border-radius: 10px;
+  }
+}
+@media (min-width: 769px){
+  .sidebar-detached {
+      display: block;
+      position: inherit;
+      margin-bottom: 20px;
+  }
+}

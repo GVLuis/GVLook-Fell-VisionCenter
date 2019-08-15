@@ -1,0 +1,176 @@
+/* ------------------------------------------------------------------------------
+ *
+ *  # Main Navigation Sidebar
+ *
+ * ---------------------------------------------------------------------------- */
+ .sidebar {
+    background-color: #000000;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    display: none;
+  }
+  @media (min-width: 769px) {
+    .sidebar {
+      display: table-cell;
+      vertical-align: top;
+      width: 260px;
+    }
+  }
+  .sidebar-main {
+    z-index: 99;
+  }
+
+  .sidebar-all-hidden .sidebar-main,
+  .sidebar-main-hidden .sidebar-main {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .sidebar-mobile-main .sidebar-main {
+      display: block;
+    }
+  }
+  .category-content {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .navigation {
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    position: relative;
+  }
+  .sidebar-user + .sidebar-category .navigation {
+    padding-top: 0;
+  }
+  .navigation .hidden-ul {
+    display: none;
+  }
+  .navigation li {
+    position: relative;
+  }
+  .navigation li + li {
+    margin-top: 1px;
+  }
+  .navigation li + .navigation-header {
+    margin-top: 10px;
+  }
+  .navigation li a {
+    color: rgba(255, 255, 255, 0.75);
+    display: block;
+    -webkit-transition: background 0.15s linear, color 0.15s linear;
+    -o-transition: background 0.15s linear, color 0.15s linear;
+    transition: background 0.15s linear, color 0.15s linear;
+  }
+  .navigation li a:hover,
+  .navigation li a:focus {
+    background-color: #fa6e61;
+    color: #fff;
+  }
+  .navigation li a > i {
+    float: left;
+    top: 0;
+    margin-top: 2px;
+    margin-right: 15px;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .navigation li.disabled > a,
+  .navigation li.disabled > a:hover,
+  .navigation li.disabled > a:focus {
+    color: inherit;
+    background-color: transparent;
+    cursor: not-allowed;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+  }
+ 
+  .navigation li.navigation-divider {
+    margin: 10px 0;
+    height: 1px;
+    background-color: rgba(221, 23, 21, .5);
+  }
+  .navigation > li > a {
+    padding: 12px 20px;
+    min-height: 44px;
+    font-weight: 500;
+  }
+  .sidebar-xs-indicator .sidebar-fixed .sidebar-content {
+    top: 0!important;
+  }
+
+@media (min-width: 769px) {
+    .sidebar-xs .sidebar-main {
+      width: 56px;
+    }
+    .sidebar-xs .sidebar-main .sidebar-category {
+      display: none;
+    }
+    .sidebar-xs .sidebar-main .sidebar-category-visible {
+      display: block;
+    }
+ 
+    .sidebar-xs .sidebar-main .navigation > li > a {
+      display: block;
+      text-align: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .sidebar-xs .sidebar-main .navigation > li > a > span {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: -260px;
+      background-color: #fa6e61;
+      border: 1px solid #fa6e61;
+      padding: 11px 20px;
+      width: 260px;
+      text-align: left;
+      color: #fff;
+      cursor: pointer;
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+ 
+    .sidebar-xs .sidebar-main .navigation > li > a > i {
+      margin: 2px 0;
+      display: block;
+      float: none;
+    }
+
+    .sidebar-xs .sidebar-main .navigation > li .has-ul > span {
+      border-radius: 0 3px 0 0;
+      cursor: default;
+    }
+
+    .sidebar-xs .sidebar-main .navigation > li.disabled:hover > ul,
+    .sidebar-xs .sidebar-main .navigation > li.disabled:hover > a > span {
+      display: none!important;
+    }
+
+    .sidebar-xs .sidebar-main .navigation > li:hover > a > span {
+      display: block;
+    }
+    .sidebar-xs .sidebar-main .navigation > li:hover:not(.active) > a {
+      background-color: #fa6e61;
+      color: #fff;
+    }
+
+    .sidebar-xs .sidebar-main .sidebar-user .category-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .sidebar-xs .sidebar-main .sidebar-user .media-body,
+    .sidebar-xs .sidebar-main .sidebar-user .media-right {
+      display: none;
+    }
+}
+
+.img-perfil {
+  display: initial;
+  width: 60%;
+}
