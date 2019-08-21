@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<!-- Head -->
 	<head>
 		<meta charset="utf-8">
@@ -22,21 +22,18 @@
 		<script src="global_assets/js/libraries/jquery.min.js"></script>
 		<script src="global_assets/js/libraries/bootstrap.min.js"></script>
 		<script src="global_assets/js/jquery_ui/widgets.min.js"></script> <!--- Functions (.affix / .datepicker / .autocomplete / .reziseble / .tooltip) -->
-		<script src="global_assets/js/formatter/formatter.min.js"></script> <!--- Format for some fields -->
 		<script src="global_assets/js/nicescroll/nicescroll.min.js"></script> <!-- Scroll function -->
 		<script src="global_assets/js/global-functions.js"></script> <!-- Global functionallity -->
 		<!-- /global JS files -->
 
 		<!-- Local JS files -->
-		<script src="local_assets/clients/js/browser-district.js"></script> <!-- Autocomplete fields -->
-		<script src="local_assets/clients/js/popular-mails.js"></script> <!-- Autocomplete fields -->
-		<script src="local_assets/clients/js/local-functions-clients.js"></script> <!-- Local functionallity -->
+		<script src="local_assets/ruc/js/local-functions-ruc.js"></script> <!-- Local functionallity -->
 		<!-- /local JS files --> 
 
 	</head>
 	<!-- /head -->
 
-	<body class="has-detached-right sidebar-xs"> <!--sidebar-xs-->
+	<body class="has-detached-right sidebar-xs">
 
 		<!-- Main navbar -->
 		<?php include 'global_assets/includes/main-navbar.php';?>
@@ -59,30 +56,29 @@
 					<div class="page-header page-header-default">
 						<div class="page-header-content">
 							<div class="page-title">
-								<h3><span class="text-semibold">Clientes</span></h3>
+								<h3><span class="text-semibold">RUC</span></h3>
 							</div>
 						</div>
 
 						<div class="breadcrumb-line">
 							<ul class="breadcrumb">
 								<li><a href="welcome.php"><i class="icon-home2 position-left"></i> Inicio</a></li>
-								<li class="active">Clientes</li>
+								<li class="active">RUC</li>
 							</ul>
 						</div>
 					</div>
 					<!-- /page header -->
 					
-
 					<!-- Content area -->
 					<div class="content">
 
 						<!-- Detached content -->
 						<div class="container-detached">
 							<div class="content-detached">
-								<!-- Search section -->
+								<!-- Receipt section -->
 								<div class="panel panel-alpha mb0">
 									<div class="panel-heading">
-										<h5 class="panel-title">Búsqueda</h5>
+										<h5 class="panel-title">Comprobante físico</h5>
 										<div class="heading-elements">
 											<ul class="icons-list">
 												<li><a data-action="collapse"></a></li>
@@ -93,31 +89,55 @@
 										<form action="#">
 											<div class="row">
 												<div class="col-sm-4">
-													<label>DNI</label>
+													<label>Número de boleta física</label>
 													<div class="form-group">
 														<input type="text" class="form-control">
 													</div>
 												</div>
 												<div class="col-sm-4">
-													<label>Apellido paterno</label>
+													<label>Fecha de venta</label>
+													<div class="input-group">
+														<span class="input-group-addon"><i class="icon-calendar"></i></span>
+														<input type="text" class="form-control datepicker">
+													</div>
+												</div>
+											</div>
+										</form>									
+									</div>
+								</div>
+								<!-- Search RUC section -->
+								<div class="panel panel-alpha mb0">
+									<div class="panel-heading">
+										<h5 class="panel-title">Buscar RUC</h5>
+										<div class="heading-elements">
+											<ul class="icons-list">
+												<li><a data-action="collapse"></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="panel-body pb0">
+										<form action="#">
+											<div class="row">
+												<div class="col-sm-4">
+													<label>RUC</label>
 													<div class="form-group">
 														<input type="text" class="form-control">
 													</div>
 												</div>
 												<div class="col-sm-4">
-													<label>Apellido materno</label>
+													<label>Nombre de empresa</label>
 													<div class="form-group">
 														<input type="text" class="form-control">
 													</div>
 												</div>
 												<div class="col-sm-4">
-													<label>Nombre</label>
+													<label>Dirección</label>
 													<div class="form-group">
 														<input type="text" class="form-control">
 													</div>
 												</div>
 											</div>
-										</form>									
+										</form>
 									</div>
 								</div>
 								<!-- Filter section -->
@@ -134,38 +154,19 @@
 										<form action="#">
 											<div class="row">
 												<div class="col-sm-4">
-													<label>Sucursal</label>
+													<label>RUC</label>
 													<div class="form-group">
 														<input type="text" class="form-control">
 													</div>
 												</div>
 												<div class="col-sm-4">
-												<label>Fecha de nacimiento</label>
-													<div class="form-group">
-														
-														<input type="text" class="form-control" name="format-date" placeholder="DD/MM/AAAA">
-													</div>
-												</div>
-												<div class="col-sm-4">
-													<label>Apellido paterno</label>
+													<label>Nombre de empresa</label>
 													<div class="form-group">
 														<input type="text" class="form-control">
 													</div>
 												</div>
 												<div class="col-sm-4">
-													<label>Apellido materno</label>
-													<div class="form-group">
-														<input type="text" class="form-control">
-													</div>
-												</div>
-												<div class="col-sm-4">
-													<label>Nombre</label>
-													<div class="form-group">
-														<input type="text" class="form-control">
-													</div>
-												</div>
-												<div class="col-sm-4">
-													<label>Celular</label>
+													<label>Dirección</label>
 													<div class="form-group">
 														<input type="text" class="form-control">
 													</div>
@@ -174,7 +175,6 @@
 										</form>
 									</div>
 								</div>
-
 								<!-- Results section -->
 								<div class="panel panel-alpha mb0">
 									<div class="panel-heading bb0 pb0">
@@ -185,67 +185,51 @@
 											<table class="table table-framed">
 												<thead>
 													<tr>
-														<th>Sucursal</th>
-														<th>Nº Doc.</th>
-														<th>Fecha de nacimiento</th>
+														<th>RUC</th>
 														<th>Nombre</th>
-														<th>Apellido paterno</th>
-														<th>Apellido materno</th>
-														<th>Celular</th>
+														<th>Dirección</th>
 														<th>Acción</th>
 													</tr>
 												</thead>
 												<tbody>
 													<tr>
-														<td>6342</td>
-														<td>6345356342</td>
-														<td>12/04/1984</td>
-														<td>Jorh</td>
-														<td>Doe</td>
-														<td>Doe</td>
-														<td>5523456789</td>
+														<td>FYBU847238UNO</td>
+														<td>Jorh Doe</td>
+														<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
 														<td>
 															<div class="btn-group btn-action">
-																<a href="counter-sale.php" type="button" class="btn btn-xs btn-alpha btn-rounded">Ir a venta</a>
+																<button type="button" class="btn btn-xs btn-alpha btn-rounded">Facturar</button>
 																<button type="button" class="btn-action-submenu btn btn-xs btn-alpha btn-rounded dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
 																<ul class="action-submenu dropdown-menu dropdown-menu-right">
-																	<li><a href="#" data-toggle="modal" data-target="#modal-edit-client">Editar registro</a></li>
+																	<li><a href="#" data-toggle="modal" data-target="#modal-edit-ruc">Editar</a></li>
 																</ul>
 															</div>
 														</td>
 													</tr>
 													<tr>
-														<td>6342</td>
-														<td>6345356342</td>
-														<td>12/04/1984</td>
-														<td>Jorh</td>
-														<td>Doe</td>
-														<td>Doe</td>
-														<td>5523456789</td>
+														<td>FYBU847238UNO</td>
+														<td>Jorh Doe</td>
+														<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
 														<td>
 															<div class="btn-group btn-action">
-																<a href="counter-sale.php" type="button" class="btn btn-xs btn-alpha btn-rounded">Ir a venta</a>
+																<button type="button" class="btn btn-xs btn-alpha btn-rounded">Facturar</button>
 																<button type="button" class="btn-action-submenu btn btn-xs btn-alpha btn-rounded dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
 																<ul class="action-submenu dropdown-menu dropdown-menu-right">
-																	<li><a href="#" data-toggle="modal" data-target="#modal-edit-client">Editar registro</a></li>
+																	<li><a href="#" data-toggle="modal" data-target="#modal-edit-ruc">Editar</a></li>
 																</ul>
 															</div>
 														</td>
 													</tr>
 													<tr>
-														<td>6342</td>
-														<td>6345356342</td>
-														<td>12/04/1984</td>
-														<td>Jorh</td>
-														<td>Doe</td>
-														<td>Doe</td>
-														<td>5523456789</td>
+														<td>FYBU847238UNO</td>
+														<td>Jorh Doe</td>
+														<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
 														<td>
 															<div class="btn-group btn-action">
-															<a href="counter-sale.php" type="button" class="btn btn-xs btn-alpha btn-rounded">Ir a venta</a>
+																<button type="button" class="btn btn-xs btn-alpha btn-rounded">Facturar</button>
 																<button type="button" class="btn-action-submenu btn btn-xs btn-alpha btn-rounded dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
 																<ul class="action-submenu dropdown-menu dropdown-menu-right">
-																	<li><a href="#" data-toggle="modal" data-target="#modal-edit-client">Editar registro</a></li>
+																	<li><a href="#" data-toggle="modal" data-target="#modal-edit-ruc">Editar</a></li>
 																</ul>
 															</div>
 														</td>
@@ -270,15 +254,15 @@
 									</div>
 									<div class="panel-footer pb0">
 										<div class="form-group ml10 pull-right">
-											<button type="button" class="btn btn-alpha btn-std btn-rounded w100">Buscar</button>
+											<button type="button" class="btn btn-alpha btn-std btn-rounded">Buscar</button>
 										</div>
 									</div>									
-								</div>							
+								</div>								
 							</div>
 						</div>
 
 						<!-- Sidebar -->
-						<?php include 'local_assets/clients/includes/sidebar-clients.php';?>
+						<?php include 'local_assets/ruc/includes/sidebar-ruc.php';?>
 						<!-- /sidebar -->
 
 						<!-- Footer -->
@@ -297,9 +281,9 @@
 		</div>
 		<!-- /page container -->
 
-		<!-- Modals sidebar -->
-		<?php include 'local_assets/clients/includes/modal-add-client.php';?>
-		<?php include 'local_assets/clients/includes/modal-edit-client.php';?>
-		<!-- /modals sidebar -->
+		<!-- Main sidebar -->
+		<?php include 'local_assets/ruc/includes/modal-add-ruc.php';?>
+		<?php include 'local_assets/ruc/includes/modal-edit-ruc.php';?>
+		<!-- /main sidebar -->
 	</body>
 </html>
